@@ -1,1 +1,50 @@
+import { useState } from 'react';
+import './calculator.css'
 
+function Calculator(){
+
+
+
+
+
+    const [display,setDisplay] = useState([""]);
+    const [numbers,setNumbers] = useState([""]);
+    console.log(display.lastIndexOf)
+
+   
+
+    return(
+        <>
+         <div className="container">
+            <input type="text" name='displayy' value={display}  onChange={(e)=>{
+           setDisplay(e.target.value)
+            }}/>
+             <button className="small-btn"  onClick={(e)=>{ setDisplay("") }}>AC</button>
+             <button className="small-btn"  onClick={(e)=>{setDisplay(display.slice(0,-1))}}>DE</button>
+             <button className="small-btn" value={"."} onClick={(e)=>{ setDisplay(display+e.target.value) }}>.</button>
+             <button className="small-btn" value={"/"} onClick={(e)=>{setDisplay(display + e.target.value)}}>/</button>
+             <button className="small-btn" value={7} onClick={(e)=>{ setDisplay(display + e.target.value) }}>7</button>
+             <button className="small-btn" value={8} onClick={(e)=>{setDisplay(display + e.target.value)}}>8</button>
+             <button className="small-btn" value={9} onClick={(e)=>{ setDisplay(display + e.target.value) }}>9</button>
+             <button className="small-btn" value={"*"} onClick={(e)=>{setDisplay(display + e.target.value)}}>*</button>
+             <button className="small-btn" value={4} onClick={(e)=>{ setDisplay(display + e.target.value) }}>4</button>
+             <button className="small-btn" value={5} onClick={(e)=>{setDisplay(display + e.target.value)}}>5</button>
+             <button className="small-btn" value={6} onClick={(e)=>{ setDisplay(display + e.target.value) }}>6</button>
+             <button className="small-btn" value={"-"} onClick={(e)=>{setDisplay(display + e.target.value)}}>-</button>
+             <button className="small-btn" value={1} onClick={(e)=>{ setDisplay(display + e.target.value) }}>1</button>
+             <button className="small-btn" value={2} onClick={(e)=>{setDisplay(display + e.target.value)}}>2</button>
+             <button className="small-btn" value={3} onClick={(e)=>{ setDisplay(display + e.target.value) }}>3</button>
+             <button className="small-btn" value={"+"} onClick={(e)=>{setDisplay(display + e.target.value)}}>+</button>
+             <button className="small-btn" value={"00"} onClick={(e)=>{ setDisplay(display + e.target.value) }}>00</button>
+             <button className="small-btn" value={0} onClick={(e)=>{setDisplay(display + e.target.value)}}>0</button>
+             <button className="small-btn last" onClick={(e)=>{
+                setDisplay(eval(display));
+              
+             }}>=</button>
+         </div>
+        
+        </>
+    )
+}
+
+export default Calculator;
