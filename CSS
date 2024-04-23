@@ -1,1 +1,40 @@
+.container{
+    border: solid black;
+    min-height: 489px;
+    width: 320px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    background-color: rgb(26, 25, 25);
+}
 
+.small-btn{
+    color: white;
+    font-size: 20px;
+    border: solid rgb(51, 47, 47);
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(34, 34, 34);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+input{
+    color: white;
+    background-color: rgb(104, 104, 104);
+    width: 95%;
+    margin-top: 30px;
+    height: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid rgb(51, 47, 47);
+    outline: none;
+    font-size: 30px;
+}
+
+.last{
+    width: 42%;
+}
